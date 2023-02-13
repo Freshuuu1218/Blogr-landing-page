@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hamburger{
+    display: none;
+}
+header{
+    height: 600px;
+    width: 100%;
+    background: hsl(13,100%,72%);
+    background-position: 25% 52%;
+    background-image: url("/images/bg-pattern-intro-desktop.svg"), linear-gradient(to right,hsl(13,100%,72%) 10%, hsl(353,100%,62%)65%);
+    background-size: 225%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 0 7em;
+}
+.navigation{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    color: white;
+    padding-top: 4em;
+}
+.navigation .logo{
+    margin-right: 5em;
+    width: 10%;
+}
+.nav-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+}
+/* main nav */
+.nav-section nav #main-nav{
+    display: flex;
+    list-style: none;
+}
+/* main nav elements */
+.nav-section nav #main-nav li{
+    margin-right: 3em;
+    position: relative;
+}
+.nav-section nav #main-nav li:hover{
+    text-decoration: underline;
+}
+.nav-section nav #main-nav li img{
+    margin-left: .5em;
+}
+/* drop down menu */
+.nav-section nav .drop-down-nav {
+    margin-top: 1em;
+    padding: 1.5em 2.5em 1em 1em;
+    list-style: none;
+    display: none;
+    color: hsl(237, 17%, 21%);
+    background-color: #fff;
+    position: absolute;
+    left: -25%;
+    border-radius: .5em;
+    font-weight: 300;
+    margin-right: 0;
+    box-shadow:0 0 50px rgba(0, 0, 0, .3);
+}
+/* elements in drop down menu */
+nav #main-nav .drop-down-nav li{
+    margin-right: 0;
+    padding-bottom: .75em;
+    
+}
+nav #main-nav .drop-down-nav li:hover{
+    font-weight: 700;
+    text-decoration: none;
+}
+/* appear when hover */
+.nav-section nav #main-nav li:hover>ul{
+    display: block;
+    
+}
+/* arrow rotate */
+.nav-section nav #main-nav li:hover img{
+    transform: rotate(180deg);
+    transition: all .2s linear ;
+}
+.login-section{
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    margin: 0 2em 0 auto;
+    display: flex;
+    align-items: center;
+}
+.login-section button{
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    color: hsl(353,100%,62%);
+    background-color: white;
+    border: 0;
+    border-radius: 2em;
+    padding: 1em 2.5em;
+    margin-left: 1em;
+}
+.header-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-text h1{
+    color: white;
+    font-family: 'Overpass';
+    font-size: 3.5em;
+    margin-top: 2em;
+}
+.header-text p{
+    font-family: 'Overpass';
+    color: white;
+    font-size: 1.2em;
+    margin-top: 1em;
+    letter-spacing: .03em;
+}
+.header-text-buttons{
+    display: flex;
+    margin-top: 3em;
+}
+.header-text button.sff{
+    font-size: 1.em;
+    color: hsl(353,100%,62%);
+    background-color: white;
+    border: 0;
+    border-radius: 2em;
+    padding: 1em 1em;
+    margin-right: 1em;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+}
+.header-text button.sff:hover,
+.login-section button:hover{
+    color: white;
+    background-color: hsl(355, 100%, 74%);
+    cursor: pointer;
+}
+.header-text button.lm{
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 2em;
+    padding: 1em 1.5em;
+}
+.header-text button.lm:hover{
+    background-color: white;
+    color: hsl(355, 100%, 74%);
+}
+
+.design-for-the-future{
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+    position: relative;
+}
+.design-for-the-future h2{
+    position: absolute;
+    font-family: 'Overpass';
+    font-size: 2.25em;
+    color: hsl(208, 49%, 24%);
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+}
+.dftf-content{
+    display: flex;
+    align-items: center;
+}
+.dftf-left{
+    width: 50%;
+    padding-left: 9em;
+}
+.dftf-left h3{
+    color: hsl(208, 49%, 24%);
+    font-family: 'Overpass';
+    font-size: 1.65em;
+    margin-bottom: 1em;
+}
+.dftf-left p{
+    width: 87.5%;
+    font-family: 'Overpass';
+    font-size: .95em;
+    letter-spacing: .025em;
+    line-height: 1.6em;
+    color: hsl(207, 13%, 34%);
+}
+#iee{
+    margin-bottom: 6em;
+}
+.dftf-right{
+    padding-left: 4em;
+    width: 50%;
+}
+
+.state-of-the-Art-Infrastructure{
+    display: flex;
+    position: relative;
+    height: 400px;
+    background: hsl(237, 17%, 21%);
+    background-repeat: no-repeat;
+    background-position: -50% 82.5%;
+    background-image: url('./images/bg-pattern-circles.svg'), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    border-radius: 0 6em 0 6em;
+    align-items: center;
+    justify-content: flex-end;
+}
+.sotai-left img{
+    position: absolute;
+    top: -17.5%;
+    left: 10%;
+}
+.sotai-right{
+    width: 48.5%;
+}
+.sotai-right h3{
+    font-family: 'Overpass';
+    font-size: 2.15em;
+    letter-spacing: .02em;
+    color: white;
+    margin-bottom: .5em;
+}
+.sotai-right p{
+    width: 75%;
+    font-size: .95em;
+    line-height: 1.75em;
+    letter-spacing: .03em;
+    font-family: 'Ubuntu';
+    color: white;
+    font-weight: 300;
+}
+
+.free-open-simple {
+    display: flex;
+    align-items: center;
+    padding: 6em 0;
+}
+.fos-right {
+    width: 50%;
+    padding: 2em;
+}
+
+.fos-right h3 {
+    color: hsl(208, 49%, 24%);
+    font-family: 'Overpass';
+    font-size: 1.65em;
+    margin-bottom: 1em;
+}
+
+.fos-right p {
+    width: 75%;
+    font-family: 'Overpass';
+    font-size: .95em;
+    letter-spacing: .025em;
+    line-height: 1.6em;
+    color: hsl(207, 13%, 34%);
+}
+#fos {
+    margin-bottom: 6em;
+}
+.fos-left {
+    width: 50%;
+}
+.fos-left img{
+    position: relative;
+    top: 0;
+    left: -17.5em;
+}
+footer{
+    display: flex;
+    padding: 4em 10% ;
+    border-radius: 0 6em 0 0;
+    color: hsl(240, 2%, 79%);
+    background-color: hsl(240, 10%, 16%);
+}
+.footer-logo{
+    margin-right: 5em;
+}
+footer ul{
+    font-family: 'Ubuntu';
+    width: 80%;
+    justify-content: space-around;
+    display: flex;
+    list-style: none;
+    font-weight: 300;
+}
+footer span{
+    display: block;
+    color: white;
+    font-weight: 500;
+    padding-bottom: 3em;
+}
+
+footer ul li ul li{
+    margin-bottom: 1.5em;
+}
+footer ul li ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+footer ul li ul{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width:430px){
+
+    .hamburger{
+        display: block;
+        margin-left: auto;
+    }
+    .nav-section {
+        border-radius: .25em;
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        top: 17.5%;
+        left: 5%;
+        background-color: white;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        z-index: 100;
+    }
+    
+    /* main nav */
+    .nav-section nav{
+        width: 90%;
+    }
+    .nav-section nav #main-nav {
+        border-radius: .2em;
+        display: flex;
+        background-color: #fff;
+        color: hsl(237, 17%, 21%);
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 0;
+    }
+    
+    /* main nav elements */
+    .nav-section nav #main-nav li {
+        margin: 1em 0;
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-section nav #main-nav li:hover {
+        text-decoration: none;
+        text-align: center;
+    }
+    
+    .nav-section nav #main-nav li img {
+        margin-left: .5em;
+    }
+    
+    /* drop down menu */
+    .nav-section nav .drop-down-nav {
+        margin-top: 1em;
+        text-align: center;
+        padding: .5em 0;
+        display: none;
+        color: hsl(237, 17%, 21%);
+        background-color: #eee;
+        width: 90%;
+        position: relative;
+        margin-right: 0;
+        box-shadow: none;
+        left: 5%;
+    }
+    
+    /* elements in drop down menu */
+    nav #main-nav .drop-down-nav li {
+        margin-right: 0;
+        padding-bottom: .5em;
+    }
+    
+    .login-section {
+        flex-direction: column;
+        width: 100%;
+    }
+    .login-section #line{
+        width: 80%;
+        height: 1px;
+        background-color: #ddd;
+        margin-bottom: 2em;
+    }
+    .login-section p{
+        color: hsl(237, 17%, 21%);
+        font-size: 1.1em;
+        margin-bottom: 1.5em;
+    }
+    .login-section button {
+        color: white;
+        background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        font-size: 1em;
+        margin-bottom: 2em;
+        margin-left: 0;
+    }
+    header {
+        background-position: 35% 31.5%;
+        background-image: url("./images/bg-pattern-intro-mobile.svg"), linear-gradient(130deg, hsl(13, 100%, 72%) 25%, hsl(353, 100%, 62%)65%);
+        background-size: 350%;
+        border-radius: 0 0 0 6em;
+    }
+    .header-text {
+        width: 85%;
+        text-align: center;
+        margin-top: 2em;
+    }   
+    .header-text h1 {
+        font-size: 2.1em;
+    } 
+    .header-text p {
+        width: 95%;
+        font-size: 1.1em;
+    }
+    .header-text-buttons {
+        margin-top: 3em;
+    }     
+    .header-text button.sff {
+        font-size: 1em;
+    }        
+    .header-text button.lm {
+        font-size: 1em;
+    }
+    .design-for-the-future {
+        display: flex;
+        flex-direction: column;
+        margin: 4em 2em;
+        position: relative;
+    }
+    .design-for-the-future h2 {
+        text-align: center;
+        width: 100%;
+        font-size: 1.75em;
+        top: 4%;
+    }
+    .dftf-content {
+        flex-direction: column-reverse;
+    }
+    .dftf-left {
+        text-align: center;
+        width: 100%;
+        padding-left: 0em;
+        margin-bottom: 10em;
+    }
+    .dftf-left h3 {
+        font-size: 1.75em;
+        margin-bottom: .5em;
+    }
+    
+    .dftf-left p {
+        width: 100%;
+        font-size: 1em;
+    }
+    #iee {
+        margin-bottom: 3em;
+    }
+    .dftf-right {
+        margin-top: 6em;
+        margin-bottom: 2em;
+        display: flex;
+        justify-content: center;
+        padding-left: 0em;
+        width: 100%;
+    }
+    .state-of-the-Art-Infrastructure {
+        height: 600px;
+        background-position: 42.5% 450%;
+        background-image: url('./images/bg-pattern-circles.svg'), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+        background-size: 175%;
+    }
+    .sotai-left img {
+        width: 100%;
+        position: absolute;
+        top: -30%;
+        left: 0%;
+    }
+    .sotai-right {
+        text-align: center;
+        width: 100%;
+        padding: 0 2em;
+        margin-top: 10em;
+    }  
+    .sotai-right p {
+        width: 100%;
+    }
+    .free-open-simple {
+        flex-direction: column;
+        padding: 0;
+        margin-bottom: 5em;
+    }
+    .fos-right {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fos-right p {
+        width: 80%;
+    }
+    #fos {
+        margin-bottom: 3em;
+    }
+    .fos-left {
+        width: 100%;
+        padding: 3em 0 2em;
+    }
+    .fos-left img {
+        position: relative;
+        top: 0;
+        left: -17%;    
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-logo {
+        margin-right: 0;
+        margin-bottom: 2em;
+    }
+    footer ul {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+    }
+    footer span {
+        text-align: center;
+        padding-bottom: 1.75em;
+        margin-top: 2em;
+    }
+    footer ul li ul li {
+        margin-bottom: .75em;
+    }
+
+}
